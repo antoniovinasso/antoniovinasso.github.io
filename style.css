@@ -85,7 +85,6 @@ header nav.menu-desktop ul li {
 }
 
 /* ESTILO DO MENU MOBILE */
-
 .btn-abrir-menu{
     display: none;
 }
@@ -114,7 +113,6 @@ header nav.menu-desktop ul li {
 .menu-mobile.abrir-menu ~ .overlay-menu{
     display: block;
 }
-
 
 .menu-mobile .btn-fechar{
     padding: 20px 5%;
@@ -181,18 +179,16 @@ section.topo-do-site .flex {
 
 .topo-do-site .img-topo-site img {
     position: relative;
-    max-width: 800px; /* Foto do topo aumentada */
+    max-width: 600px; 
     width: 100%;      
     height: auto;     
     animation: flutuar 3s ease-in-out infinite alternate;
 }
 
-
 @keyframes flutuar {
     0% {
         top: 0;
     }
-
     100% {
         top: 30px;
     }
@@ -227,12 +223,12 @@ section.atuacao .flex, section.ferramentas .flex {
 }
 
 .atuacao-box i {
-    font-size: 30px; /* Tamanho dos ícones reduzido de 60px para 30px */
+    font-size: 30px; 
     color: #7012dd;
 }
 
 .atuacao-box h3 {
-    font-size: 24px;
+    font-size: 14px;
     margin: 15px 0;
 }
 
@@ -241,17 +237,35 @@ section.atuacao .flex, section.ferramentas .flex {
     color: #aaa;
 }
 
-/* ESTILO DO SOBRE E MEU PERFIL */
+/* =======================================================
+   NOVO ESTILO DO SOBRE (FOTO MAIOR E ALINHADA)
+========================================================== */
 section.sobre {
     padding: 80px 4%;
 }
 
-section.sobre .flex {
+.flex-sobre {
+    display: flex;
     align-items: center;
     gap: 60px;
 }
 
-.sobre .txt-sobre {
+.img-sobre {
+    width: 45%; /* Garante que a foto tenha um espaço amplo */
+    flex-shrink: 0;
+}
+
+.img-sobre img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(112, 18, 221, 0.2);
+    /* Removido o translateY(-60px) que esmagava a imagem */
+}
+
+.txt-sobre {
+    width: 55%;
     color: #fff;
 }
 
@@ -271,7 +285,6 @@ section.sobre .flex {
     text-align: justify;
 }
 
-/* Lista de Formações (Idade, Curso, etc) */
 .lista-formacao {
     list-style: none;
     margin: 30px 0;
@@ -292,7 +305,6 @@ section.sobre .flex {
     font-size: 22px;
 }
 
-/* Meu Perfil */
 .meu-perfil {
     margin: 40px 0;
     padding: 20px;
@@ -329,60 +341,108 @@ section.sobre .flex {
     transition: .2s;
 }
 
-.img-sobre img {
-    max-width: 1000px; /* Foto do sobre aumentada */
-    width: 100%;      
-    transform: translateY(-60px);
-    height: auto;     
-    border-radius: 20px; 
-}
 
-/* ESTILO DO PORTFÓLIO */
+/* =======================================================
+   NOVO ESTILO DO PORTFÓLIO (ORGANIZADO EM GALERIA)
+========================================================== */
 section.portfolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
-section.portfolio .flex {
-    justify-content: space-around;
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     margin-top: 60px;
 }
 
+.card-projeto {
+    background-color: #111;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #222;
+}
+
+.card-projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(112, 18, 221, 0.2);
+    border-color: #7012dd;
+}
+
+.card-projeto a {
+    text-decoration: none;
+    display: block;
+}
+
 .img-port {
-    width: 360px;
-    height: 460px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
-    cursor: pointer;
-    border-radius: 40px;
+    width: 100%;
+    height: 320px; /* Altura padronizada para as imagens */
     position: relative;
+    overflow: hidden;
 }
 
-.img-port:hover {
-    background-position: 100% 100%;
-}
-
+/* O overlay agora serve só para escurecer a foto e mostrar o botão */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000b8;
-    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    font-weight: 600;
-    color: #fff;
     opacity: 0;
-    transition: .5s;
+    transition: .3s;
+    z-index: 1;
 }
 
-.overlay:hover {
+.card-projeto:hover .overlay {
     opacity: 1;
+}
+
+.btn-acessar {
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #7012dd;
+    padding: 10px 24px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 10px rgba(112, 18, 221, 0.5);
+}
+
+/* Área branca de baixo com os títulos evidentes */
+.info-projeto {
+    padding: 25px;
+    text-align: center;
+}
+
+.info-projeto h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.info-projeto p {
+    font-size: 14px;
+    color: #aaa;
+    font-weight: 300;
+}
+
+/* Vídeo do Outdoor */
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 /* ESTILO DO FORMULÁRIO DE CONTATO */
@@ -432,7 +492,6 @@ form .btn-enviar input {
 }
 
 /* ESTILO DO RODAPÉ */
-
 footer {
     padding: 40px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
@@ -465,82 +524,197 @@ footer .line-footer p a {
     color: #fff;
 }
 
-@media screen and (max-width: 1020px) {
+/* ========================================= */
+/* ESTILO EXCLUSIVO DA PÁGINA INTERNA DO OUTDOOR */
+/* ========================================= */
+.pagina-projeto {
+    background-color: #000;
+    min-height: 100vh;
+    padding: 60px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
 
-    /* CLASSES GERAIS */
-    .flex {
+.container-projeto {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    transition: .3s ease-in-out;
+    background-color: #111;
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: 1px solid #222;
+}
+
+.btn-voltar:hover {
+    border-color: #7012dd;
+    box-shadow: 0 0 15px rgba(112, 18, 221, 0.4);
+    transform: translateX(-5px);
+}
+
+.btn-voltar i {
+    color: #7012dd;
+    font-size: 18px;
+}
+
+.titulo-projeto {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.titulo-projeto span {
+    color: #7012dd;
+}
+
+.subtitulo-projeto {
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.wrapper-video {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(112, 18, 221, 0.25);
+    background-color: #111;
+    line-height: 0;
+}
+
+.video-principal {
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+/* ========================================= */
+/* ESTILOS PARA CELULAR (TUDO RESPONSIVO)    */
+/* ========================================= */
+@media screen and (max-width: 1020px) {
+    .flex, .flex-sobre {
         flex-direction: column;
+        gap: 40px !important; 
     }
 
-    .topo-do-site .flex{
+    .topo-do-site .flex {
         flex-direction: column-reverse;
     }
 
     h2.titulo {
-        font-size: 34px;
-        line-height: 30px;
+        font-size: 28px !important; 
+        line-height: 34px;
     }
 
-    /* CABEÇALHO */
-    .menu-desktop,
-    .btn-contato {
+    .menu-desktop, .btn-contato {
         display: none;
     }
 
-    /* TOPO DO SITE */
-
-    section.topo-do-site .flex {
-        gap: 40px;
+    .btn-abrir-menu {
+        display: block;
     }
 
     section.topo-do-site {
-        padding: 20px 8%;
+        padding: 40px 5%;
     }
 
     .topo-do-site h1 {
-        font-size: 30px;
+        font-size: 28px; 
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        text-align: center;
+        font-size: 15px; 
+    }
+
+    .topo-do-site .btn-contato {
+        display: block; 
+        text-align: center;
     }
 
     .topo-do-site .img-topo-site img {
-        width: 100%;
-        max-width: 400px; /* Limite seguro para o celular */
+        width: 75%; 
+        max-width: 260px;
         margin: 0 auto;
+        display: block;
     }
 
-    /* ÁREAS DE ATUAÇÃO E FERRAMENTAS */
     section.atuacao, section.ferramentas {
-        padding: 40px 8%;
+        padding: 40px 5%;
     }
 
     .atuacao-box {
         max-width: 100%; 
+        padding: 25px 20px; 
+    }
+    
+    .atuacao-box i {
+        font-size: 35px; 
     }
 
-    /* SOBRE */
+    .atuacao-box h3 {
+        font-size: 20px;
+    }
+
     section.sobre {
-        padding: 80px 8%;
+        padding: 40px 5%;
     }
 
     .sobre .txt-sobre h2 {
-        font-size: 34px;
-        line-height: 35px;
+        font-size: 28px;
+        line-height: 32px;
         text-align: center;
+    }
+
+    .sobre .txt-sobre p {
+        text-align: center;
+        font-size: 15px;
     }
     
     .lista-formacao li {
-        justify-content: center; /* Centraliza a lista no celular */
-        text-align: center;
+        justify-content: flex-start; 
+        text-align: left;
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .btn-social{
         text-align: center;
     }
 
-    .img-sobre img{
+    /* Ajuste da foto no celular */
+    .img-sobre {
         width: 100%;
-        max-width: 400px;
-        margin: 0 auto 30px auto;
-        transform: translateY(0); 
+    }
+
+    .img-sobre img {
+        width: 75%;
+        max-width: 400px; 
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .txt-sobre {
+        width: 100%;
     }
 
     .meu-perfil {
@@ -548,30 +722,49 @@ footer .line-footer p a {
         border-left: none;
         border-top: 4px solid #7012dd;
         border-radius: 0 0 10px 10px;
+        padding: 15px;
     }
 
-    /* PORTFÓLIO */
+    .meu-perfil .destaque-perfil {
+        font-size: 15px; 
+        line-height: 24px;
+    }
+
+    /* Correção do layout de Projetos no celular */
     section.portfolio {
-        padding: 80px 8%;
+        padding: 40px 5%;
+    }
+
+    .grid-portfolio {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .img-port {
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
+        height: 300px; 
     }
     
-    section.portfolio .flex {
-       gap: 60px;
+    section.formulario {
+        padding: 40px 5%;
     }
 
-    /* RODAPÉ */
+    footer {
+        padding: 40px 5%;
+    }
+
     footer .flex {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
     }
 
     footer .line-footer {
         text-align: center;
     }
+    
+    footer .line-footer p {
+        font-size: 14px;
+    }
+
+    .titulo-projeto { font-size: 32px; }
+    .btn-voltar { padding: 10px 22px; font-size: 14px; }
 }
