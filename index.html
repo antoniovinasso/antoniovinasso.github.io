@@ -119,14 +119,14 @@
 
         <section class="sobre" id="sobre">
             <div class="interface">
-                <div class="flex">
+                <div class="flex-sobre">
                     <div class="img-sobre">
                         <img src="images/eu-png sorrindo.png" alt="Foto Antônio Vitor">
                     </div>
                     
                     <div class="txt-sobre">
                         <h2>MUITO PRAZER, <span>SOU ANTÔNIO VITOR.</span></h2>
-                        <p>Criatividade, estratégia e comunicação são os pilares que guiam meu trabalho. Sou apaixonado por publicidade, audiovisual e marketing digital, áreas que me permitem transformar ideias em projetos capazes de conectar pessoas, contar histórias e gerar resultados. Atualmente, faço parte da Empresa Júnior 59mil da UFRN, onde participo do desenvolvimento de conteúdos, estratégias e projetos voltados para comunicação e marketing.</p>
+                        <p>Criatividade, estratégia e comunicação são os pilares que guiam meu trabalho. Sou apaixonado por publicidade, audiovisual e marketing digital, áreas que me permitem transformar ideias em projetos capazes de conectar pessoas, contam histórias e geram resultados. Atualmente, faço parte da Empresa Júnior 59mil da UFRN, onde participo do desenvolvimento de conteúdos, estratégias e projetos voltados para comunicação e marketing.</p>
                         <p>Gosto de pensar além do óbvio, criar soluções estratégicas e explorar novas formas de comunicar. Estou em constante evolução, buscando aprender, inovar e contribuir para projetos que façam a diferença.</p>
                         
                         <ul class="lista-formacao">
@@ -163,6 +163,11 @@
                         <h3>CapCut</h3>
                     </div>
                     <div class="atuacao-box">
+                        <i class="bi bi-stars"></i>
+                        <h3>Inteligência Artificial</h3>
+                        <p>(Geração de Imagens)</p>
+                    </div>
+                    <div class="atuacao-box">
                         <i class="bi bi-vector-pen"></i>
                         <h3>Figma</h3>
                         <p>(em desenvolvimento)</p>
@@ -179,16 +184,54 @@
         <section class="portfolio" id="portfolio">
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(images/proj1.webp);">
-    <div class="overlay">ex 1</div>
+                
+                <div class="grid-portfolio">
+                    
+                    <div class="card-projeto">
+                        <a href="arco-identidade.html">
+                            <div class="img-port" style="background-image: url('images/logo-princ.png'); background-position: center; background-size: contain; background-repeat: no-repeat; background-color: #050505;">
+                                <div class="overlay">
+                                    <span class="btn-acessar">Ver Projeto</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="info-projeto">
+                            <h3>Identidade Visual</h3>
+                            <p>Arco Studio · Design (Branding)</p>
+                        </div>
                     </div>
-                    <div class="img-port" style="background-image: url(images/proj2.webp);">
-    <div class="overlay">ex 2</div>
+
+                    <div class="card-projeto">
+                        <a href="docs/Arco Studio - Estratégia de Marketing.pdf" target="_blank">
+                            <div class="img-port" style="background-image: url('images/capa-estrategia.png'); background-position: center; background-size: cover;">
+                                <div class="overlay">
+                                    <span class="btn-acessar">Abrir PDF</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="info-projeto">
+                            <h3>Estratégia de Marketing</h3>
+                            <p>Arco Studio · Planejamento (PDF)</p>
+                        </div>
                     </div>
-                    <div class="img-port" style="background-image: url(images/proj3.webp);">
-    <div class="overlay">ex 3</div>
+
+                    <div class="card-projeto">
+                        <a href="outdoor.html">
+                            <div class="img-port">
+                                <video autoplay loop muted playsinline class="video-bg">
+                                    <source src="images/videofinal.mp4" type="video/mp4">
+                                </video>
+                                <div class="overlay">
+                                    <span class="btn-acessar">Assistir Vídeo</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="info-projeto">
+                            <h3>Outdoor Digital</h3>
+                            <p>Produção Audiovisual - Outdoor</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -232,5 +275,3 @@
 
 </body>
 </html>
-
-
