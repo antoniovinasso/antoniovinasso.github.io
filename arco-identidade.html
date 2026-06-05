@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arco Studio - Manual de Identidade Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        brandBlack: '#050505',
+                        brandCard: '#0a0a0a',
+                        brandPurple: '#2D1B4E',
+                        brandLilac: '#8C7B9E',
+                        brandIvory: '#F4F1EB',
+                        brandGray: '#666666',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-border { border: 0.5px solid rgba(140, 123, 158, 0.2); }
+        .text-glow { text-shadow: 0 0 20px rgba(140, 123, 158, 0.3); }
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="bg-brandBlack text-gray-200 font-sans selection:bg-brandLilac selection:text-black">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b bento-border px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <a href="index.html#portfolio" class="text-gray-400 hover:text-white transition-colors" title="Voltar ao Portfólio">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <span class="font-display font-medium tracking-[0.2em] text-sm text-white">ARCO STUDIO</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-[10px] tracking-widest uppercase text-gray-400">
+            <a href="#marca" class="hover:text-brandLilac transition-colors">A Marca</a>
+            <a href="#logos" class="hover:text-brandLilac transition-colors">Logotipos</a>
+            <a href="#cores" class="hover:text-brandLilac transition-colors">Cores & Tipografia</a>
+            <a href="#aplicacoes" class="hover:text-brandLilac transition-colors">Aplicações</a>
+        </div>
+    </nav>
+
+    <section id="marca" class="min-h-screen pt-32 pb-20 px-6 flex flex-col justify-center items-center text-center relative grid-bg">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brandPurple/20 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <h1 class="font-display text-5xl md:text-8xl text-white tracking-[0.15em] mb-6">ARCO <span class="text-brandLilac">STUDIO</span></h1>
+        <div class="w-px h-24 bg-brandLilac/50 mx-auto mb-6"></div>
+        <p class="text-sm tracking-[0.4em] uppercase text-gray-400 font-light mb-12">Manual de Identidade Visual</p>
+        
+        <div class="flex flex-wrap justify-center gap-6 mt-12 text-xs tracking-widest uppercase text-gray-500">
+            <span>Arquitetura Contemporânea</span> •
+            <span>Design de Interiores</span> •
+            <span>Sofisticação Atemporal</span>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t bento-border">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-brandLilac block mb-4">Conceito da Marca</span>
+                <h2 class="font-display text-3xl md:text-4xl text-white mb-6 leading-tight">Minimalismo Sofisticado e Excelência em Cada Detalhe.</h2>
+                <p class="text-gray-400 font-light leading-relaxed mb-6">
+                    A identidade visual da Arco Studio foi projetada sob o conceito de <strong>Luxo Discreto (Quiet Luxury)</strong>. Inspirado no rigor do sistema de grid suíço, o design reflete uma estética arquitetônica onde o espaço em branco fala mais alto que o excesso.
+                </p>
+                <p class="text-gray-400 font-light leading-relaxed">
+                    Nossa direção fotográfica e visual prioriza a luz natural, linhas arquitetônicas puras e a textura de materiais nobres, garantindo um padrão de qualidade digno de premiações internacionais.
+                </p>
+            </div>
+            
+           <div class="w-full bg-[#111] bento-border rounded-xl relative overflow-hidden group flex items-center justify-center">
+                <img src="images/miv1.png" alt="Moodboard Arco Studio" class="w-full h-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <span class="text-[10px] uppercase tracking-widest text-gray-300 font-mono bg-black/60 px-4 py-2 rounded backdrop-blur-md text-center">
+                        
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="logos" class="bg-[#0a0a0a] py-24 px-6 border-t bento-border">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-brandLilac block mb-4">Estrutura Visual</span>
+                <h2 class="font-display text-3xl md:text-5xl text-white">Sistema de Logotipo</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="bg-black bento-border p-12 rounded-xl flex flex-col items-center justify-center h-64 relative group">
+                    <h3 class="font-display text-3xl text-white tracking-[0.1em]">ARCO <br><span class="text-brandLilac text-lg tracking-[0.3em]">STUDIO</span></h3>
+                    <span class="absolute bottom-4 text-[9px] uppercase tracking-widest text-gray-500">Logotipo Principal</span>
+                </div>
+                <div class="bg-black bento-border p-12 rounded-xl flex flex-col items-center justify-center h-64 relative">
+                    <h3 class="font-display text-2xl text-white tracking-[0.1em] flex items-center gap-4">
+                        ARCO <div class="w-px h-8 bg-brandLilac/30"></div> <span class="text-brandLilac text-sm tracking-[0.3em]">STUDIO</span>
+                    </h3>
+                    <span class="absolute bottom-4 text-[9px] uppercase tracking-widest text-gray-500">Versão Horizontal</span>
+                </div>
+                <div class="bg-brandIvory bento-border p-12 rounded-xl flex flex-col items-center justify-center h-64 relative">
+                    <h3 class="font-display text-3xl text-brandBlack tracking-[0.1em]">ARCO <br><span class="text-brandPurple text-lg tracking-[0.3em]">STUDIO</span></h3>
+                    <span class="absolute bottom-4 text-[9px] uppercase tracking-widest text-brandGray">Versão Negativa</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-black bento-border p-10 rounded-xl relative overflow-hidden grid-bg">
+                    <h4 class="font-display text-xl text-white mb-2">Grid Construtivo</h4>
+                    <p class="text-xs text-gray-400 font-light mb-12">Proporções e geometria baseadas na secção áurea.</p>
+                    <div class="flex items-center justify-center h-40">
+                        <span class="text-xs uppercase tracking-widest text-gray-600 font-mono">[Diagrama de Grid]</span>
+                    </div>
+                </div>
+                <div class="bg-black bento-border p-10 rounded-xl relative">
+                    <h4 class="font-display text-xl text-white mb-2">Área de Proteção</h4>
+                    <p class="text-xs text-gray-400 font-light mb-12">Margem de respiro mínima exigida para legibilidade.</p>
+                    <div class="flex items-center justify-center h-40 border border-dashed border-brandLilac/30 m-8">
+                        <span class="text-xs uppercase tracking-widest text-gray-600 font-mono">[Diagrama de Respiro]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cores" class="py-24 px-6 border-t bento-border">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-brandLilac block mb-4">Cromatologia</span>
+                <h2 class="font-display text-3xl md:text-5xl text-white">Paleta Institucional</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-0 h-[400px] rounded-xl overflow-hidden bento-border">
+                <div class="bg-[#0A0A0A] p-6 flex flex-col justify-end group transition-all hover:flex-grow">
+                    <h4 class="text-white font-medium mb-2">Preto Carvão Profundo</h4>
+                    <p class="text-xs text-gray-500 font-mono space-y-1">
+                        HEX #0A0A0A<br>RGB 10 10 10<br>CMYK 75 68 67 90
+                    </p>
+                </div>
+                <div class="bg-[#2D1B4E] p-6 flex flex-col justify-end group transition-all hover:flex-grow">
+                    <h4 class="text-white font-medium mb-2">Violeta Sofisticado</h4>
+                    <p class="text-xs text-brandLilac font-mono space-y-1">
+                        HEX #2D1B4E<br>RGB 45 27 78<br>CMYK 85 95 20 30
+                    </p>
+                </div>
+                <div class="bg-[#8C7B9E] p-6 flex flex-col justify-end group transition-all hover:flex-grow">
+                    <h4 class="text-brandBlack font-medium mb-2">Lilás Acinzentado</h4>
+                    <p class="text-xs text-brandBlack/70 font-mono space-y-1">
+                        HEX #8C7B9E<br>RGB 140 123 158<br>CMYK 40 45 15 5
+                    </p>
+                </div>
+                <div class="bg-[#F4F1EB] p-6 flex flex-col justify-end group transition-all hover:flex-grow">
+                    <h4 class="text-brandBlack font-medium mb-2">Marfim Suave</h4>
+                    <p class="text-xs text-brandBlack/70 font-mono space-y-1">
+                        HEX #F4F1EB<br>RGB 244 241 235<br>CMYK 3 3 6 0
+                    </p>
+                </div>
+                <div class="bg-[#666666] p-6 flex flex-col justify-end group transition-all hover:flex-grow">
+                    <h4 class="text-white font-medium mb-2">Cinza Neutro</h4>
+                    <p class="text-xs text-gray-300 font-mono space-y-1">
+                        HEX #666666<br>RGB 102 102 102<br>CMYK 60 50 50 20
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#0a0a0a] py-24 px-6 border-t bento-border">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-brandLilac block mb-4">Família Tipográfica</span>
+                <h2 class="font-display text-3xl md:text-5xl text-white mb-12">Tipografia</h2>
+                
+                <div class="mb-12">
+                    <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Tipografia Principal (Títulos)</h3>
+                    <div class="font-display text-5xl text-white mb-4">Cinzel</div>
+                    <p class="text-sm text-brandLilac font-display tracking-widest leading-loose uppercase break-all">
+                        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>0 1 2 3 4 5 6 7 8 9
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-4">Tipografia Secundária (Textos)</h3>
+                    <div class="font-sans font-light text-5xl text-white mb-4">Montserrat</div>
+                    <p class="text-sm text-gray-400 font-sans tracking-[0.2em] leading-loose break-all">
+                        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                        a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+                        0 1 2 3 4 5 6 7 8 9
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-black bento-border p-12 rounded-xl flex flex-col justify-center">
+                <h3 class="text-xs uppercase tracking-widest text-gray-500 mb-8 border-b border-gray-800 pb-4">Hierarquia Visual</h3>
+                
+                <h1 class="font-display text-4xl text-white mb-4">TÍTULO ARCO STUDIO</h1>
+                <h2 class="font-sans font-light text-xl text-brandLilac mb-6 tracking-widest uppercase">Subtítulo Institucional</h2>
+                <p class="font-sans text-sm text-gray-400 leading-relaxed font-light">
+                    Exemplo de texto corrido. O design editorial da Arco Studio exige um espaçamento perfeito e alto nível de refinamento. A leitura deve ser fluida, limpa e transmitir o luxo discreto através do silêncio visual entre as palavras.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-16 px-6 border-t bento-border text-center">
+        <h2 class="font-display text-3xl text-white tracking-[0.2em] mb-4">ARCO <span class="text-brandLilac">STUDIO</span></h2>
+        <p class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-8">Design de Excelência</p>
+        <div class="w-12 h-px bg-brandPurple mx-auto mb-8"></div>
+        <p class="text-[10px] tracking-widest text-gray-600 uppercase font-mono">Projeto Ficcional de Branding | Portfólio Antônio Vitor</p>
+    </footer>
+
+</body>
+</html>
